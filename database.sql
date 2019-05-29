@@ -15,6 +15,9 @@ CREATE TABLE `admins` (
   `usrtoken` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `admins` (`id`, `user`, `pass`, `usrtoken`) VALUES
+(1, 'admin', 'your_hashed_pass', '');
+
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
