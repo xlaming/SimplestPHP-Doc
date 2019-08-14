@@ -339,7 +339,7 @@ class App {
         if (file_exists(DIRECTORY . SEPARATOR . 'app' . SEPARATOR . 'lang' . SEPARATOR . $language . '.php')) {
             return $language;
         }
-        return is_defined('DEFAULT_LANG') ? DEFAULT_LANG : 'en';
+        return defined('DEFAULT_LANG') ? DEFAULT_LANG : 'en';
     }
 
     /**
