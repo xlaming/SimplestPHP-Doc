@@ -151,6 +151,9 @@ class App {
      * @return boolean
      */
     public static function isMobile() {
+        if (!array_key_exists('HTTP_USER_AGENT', $_SERVER)) {
+            return false;
+        }
         foreach(self::MOBILE_UA as $regex => $os) {
             if(preg_match($regex, $_SERVER['HTTP_USER_AGENT'])) {
                 return $os;
